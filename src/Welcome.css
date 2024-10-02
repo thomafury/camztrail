@@ -1,0 +1,81 @@
+/* Welcome.css */
+
+.welcome-page {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Blurred background using a pseudo-element */
+.welcome-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("./logo2.png") no-repeat center center/cover; /* Ensure the image fits and is centered */
+  background-size: cover; /* This will ensure the background image covers the whole screen */
+  filter: blur(8px); /* Apply blur to the background */
+  z-index: -1; /* Ensure it stays behind the content */
+}
+
+.header {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+}
+
+.content {
+  position: relative;
+  z-index: 1; /* Ensure the content stays above the background */
+  text-align: center;
+  color: white;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.options {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.option-box {
+  width: 150px;
+  height: 150px;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.2
+  ); /* Semi-transparent background for options */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.option-box:hover {
+  transform: scale(1.1); /* Slight enlarge effect on hover */
+}
+
+h2 {
+  font-size: 1.2rem;
+}

@@ -1,0 +1,26 @@
+.animated-heading {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #007bff; /* Change this color to fit your theme */
+  text-shadow: 0 0 20px rgba(0, 123, 255, 0.8), 0 0 30px rgba(0, 123, 255, 0.5); /* Glowing effect */
+  animation: bounce 2s infinite; /* Bounce animation */
+  font-weight: bold;
+  display: inline-block;
+}
+
+/* Keyframe animations for the heading */
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
